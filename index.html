@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geomantic Figures</title>
+    <style>
+      /* Basic styling for the demo page.  The application uses only
+       * vanilla HTML/CSS to keep the core example self‑contained and
+       * framework‑free.  Colours are muted against a dark backdrop
+       * so that the colourful dot patterns stand out clearly.
+       */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #111;
+        color: #eee;
+      }
+
+      #controls {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: #222;
+        border-bottom: 1px solid #333;
+      }
+
+      #controls label {
+        margin-right: 0.25rem;
+      }
+
+      #controls select,
+      #controls button {
+        background: #333;
+        color: #eee;
+        border: 1px solid #444;
+        padding: 0.5rem 0.75rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
+
+      #controls button:hover {
+        background: #444;
+        cursor: pointer;
+      }
+
+      canvas {
+        display: block;
+        margin: 1rem auto;
+        border: 1px solid #444;
+        background: #000;
+      }
+
+      #chartContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .chart-figure {
+        display: inline-block;
+        text-align: center;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <label for="figureSelect">Figure:</label>
+      <select id="figureSelect"></select>
+      <button id="renderFigure">Render Figure</button>
+      <button id="castChart">Cast Chart</button>
+    </div>
+    <!--
+      The main canvas uses WebGL2 to draw the selected figure.  It is sized
+      generously for clarity and bound to the `glCanvas` identifier.  If
+      WebGL2 is not available in the user's browser, the application
+      falls back to a 2D context automatically.
+    -->
+    <canvas id="glCanvas" width="800" height="400"></canvas>
+    <div id="chartContainer"></div>
+    <!-- The main application logic lives in src/js/main.js.  Loading
+         the module via type=module ensures that ES6 imports work
+         natively in modern browsers without a bundler. -->
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
