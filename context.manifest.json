@@ -1,0 +1,19 @@
+{
+  "name": "geomantic_figures",
+  "type": "GPGPU_GRID_SIM",
+  "title": "Geomantic Figures \u2014 16 Earth Patterns",
+  "brief": "16 geomantic figures (Via, Populus, Conjunctio...) rendered as dot-pattern grids. Shield chart casting with house allocation. Elemental composition (fire/air/water/earth lines) drives color. Mother-daughter-nephew-court family generation via line extraction.",
+  "inputs": [
+    "u_source"
+  ],
+  "outputs": [
+    "grid_state"
+  ],
+  "tags": [
+    "generator",
+    "geomantic-figures"
+  ],
+  "adjacency": [],
+  "status": "seed",
+  "batch": "D"
+}
