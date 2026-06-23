@@ -1,0 +1,23 @@
+# geomantic_figures
+
+> 16 figures. 4 lines of 1 or 2 dots. via. populus. conjunctio. puella. each figure has an elemental composition, a planetary ruler, a meaning. the shield chart: 4 mothers -> 4 daughters -> 4 nephews -> 4 court figures. earth divination by dot pattern.
+
+**Archetype:** GPGPU GRID SIM. **Distinct from** `cellular_automata` (not state evolution) and `iching_hexagrams` (6-line vs 4-line).
+
+## Adjacency
+- `iching_hexagrams` — binary divination cousin, different bit depth
+- `abelian_sandpile` — grid-based pattern relaxation
+- `dla_clustering` — random dot aggregation
+
+## Visual Targets
+- 16 figures as 4-line dot patterns (1 or 2 dots per line)
+- Shield chart: 16-figure layout with generational flow
+- House chart: 12 astrological houses with figure allocation
+- Elemental coloring: fire=red, air=yellow, water=blue, earth=black
+- Figure generation: mothers -> daughters (line inversion) -> nephews (addition) -> court
+
+## Technical Notes
+- 4-bit encoding: 0=1 dot, 1=2 dots per line
+- Standard figure names and correspondences
+- Shield chart generation algorithm from 4 random mothers
+- House allocation: figures distributed to 12 houses by specific rules
